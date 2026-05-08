@@ -1,6 +1,7 @@
 // src/components/ui/Navbar.jsx
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { X } from 'lucide-react';
 import { LogoIcon } from '../auth/HeroPanel';
 
 const Navbar = () => {
@@ -69,6 +70,9 @@ const Navbar = () => {
               Blood<span>Link</span>
             </span>
           </div>
+          <button className="sidebar-close" onClick={closeMenu} aria-label="Close menu">
+            <X size={24} />
+          </button>
         </div>
         
         <div className="sidebar-links">
