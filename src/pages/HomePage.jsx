@@ -10,7 +10,8 @@ import {
   ArrowRight, 
   CheckCircle2, 
   PhoneCall,
-  Quote
+  Quote,
+  Info
 } from 'lucide-react';
 import Navbar from '../components/ui/Navbar';
 import '../styles/home.css';
@@ -64,7 +65,7 @@ const HomePage = () => {
               </button>
             </div>
             
-            <div className="hero-home-quote" style={{ marginTop: '3rem', fontStyle: 'italic', color: 'var(--gray-500)', display: 'flex', gap: '0.5rem' }}>
+            <div className="hero-home-quote" style={{ marginTop: '2rem', fontStyle: 'italic', color: 'var(--gray-500)', display: 'flex', gap: '0.5rem' }}>
               <Quote size={20} className="text-red-500" />
               <p>"The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one—or even you."</p>
             </div>
@@ -115,8 +116,8 @@ const HomePage = () => {
               className="blood-card"
               style={{ textAlign: 'left' }}
             >
-              <div style={{ color: 'var(--red-600)', marginBottom: '1.5rem' }}>{item.icon}</div>
-              <h3 style={{ marginBottom: '1rem', fontSize: '1.25rem' }}>{item.title}</h3>
+              <div style={{ color: 'var(--red-600)', marginBottom: '1rem' }}>{item.icon}</div>
+              <h3 style={{ marginBottom: '0.75rem', fontSize: '1.25rem' }}>{item.title}</h3>
               <p style={{ color: 'var(--gray-500)', lineHeight: '1.6' }}>{item.desc}</p>
             </motion.div>
           ))}
@@ -141,12 +142,14 @@ const HomePage = () => {
               transition={{ delay: idx * 0.1 }}
               className="blood-card"
             >
+              <div className="blood-card-badge">
+                <Info size={14} /> <span>Reference</span>
+              </div>
               <div className="blood-type">{group.type}</div>
               <div className="blood-info">
                 <p><strong>Can Donate To:</strong> {group.donor}</p>
                 <p><strong>Can Receive From:</strong> {group.receiver}</p>
               </div>
-              <button className="blood-btn">Request Group</button>
             </motion.div>
           ))}
         </div>
@@ -166,9 +169,9 @@ const HomePage = () => {
             { step: "03", title: "Donation", desc: "The actual process takes only about 10-15 minutes." },
             { step: "04", title: "Refreshment", desc: "Rest for a few minutes and enjoy some healthy snacks." }
           ].map((item, idx) => (
-            <div key={idx} style={{ position: 'relative', padding: '2rem' }}>
+            <div key={idx} style={{ position: 'relative', padding: '1.5rem' }}>
               <div style={{ fontSize: '4rem', fontWeight: 900, color: 'rgba(198, 40, 40, 0.05)', position: 'absolute', top: 0, left: 0 }}>{item.step}</div>
-              <h3 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>{item.title}</h3>
+              <h3 style={{ marginTop: '1rem', marginBottom: '0.75rem' }}>{item.title}</h3>
               <p style={{ color: 'var(--gray-500)' }}>{item.desc}</p>
             </div>
           ))}
@@ -182,15 +185,15 @@ const HomePage = () => {
           style={{ 
             background: 'linear-gradient(135deg, var(--red-700), var(--red-900))',
             borderRadius: 'var(--radius-lg)',
-            padding: '4rem',
+            padding: '3rem 2rem',
             color: 'white',
             textAlign: 'center',
             boxShadow: '0 30px 60px rgba(198, 40, 40, 0.3)'
           }}
         >
-          <PhoneCall size={48} style={{ marginBottom: '2rem' }} />
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Emergency Blood Support</h2>
-          <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '2.5rem', maxWidth: '700px', marginInline: 'auto' }}>
+          <PhoneCall size={40} style={{ marginBottom: '1.5rem' }} />
+          <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Emergency Blood Support</h2>
+          <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2rem', maxWidth: '700px', marginInline: 'auto' }}>
             Are you in an emergency situation? Our rapid response team and active donors are 
             available 24/7. Call us or click below for immediate assistance.
           </p>

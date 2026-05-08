@@ -3,8 +3,8 @@
 /* ─── Hero Section ───────────────────────────────────────────────────── */
 .hero-home {
   position: relative;
-  min-height: 90vh;
-  padding: 8rem 5% 4rem;
+  min-height: 80vh;
+  padding: 6rem 5% 2rem; /* Reduced bottom padding from 3rem */
   background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
 /* ─── Quote Section ──────────────────────────────────────────────────── */
 .quote-banner {
   background: var(--red-600);
-  padding: 3rem 0;
+  padding: 2rem 0; /* Reduced from 3rem */
   color: white;
   overflow: hidden;
 }
@@ -103,13 +103,13 @@
 
 /* ─── Grid Sections ──────────────────────────────────────────────────── */
 .section-padding {
-  padding: 6rem 5%;
+  padding: 2.5rem 5%; /* Further reduced from 4rem */
 }
 
 .section-header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 1.75rem; /* Further reduced from 2.5rem */
 }
 
 .section-tag {
@@ -131,22 +131,36 @@
 
 .blood-groups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Reduced from 280px */
+  gap: 1.5rem; /* Reduced from 2rem */
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .blood-card {
   background: white;
-  padding: 2.5rem;
+  padding: 1.5rem; /* Reduced from 2.5rem */
   border-radius: var(--radius-lg);
   border: 1px solid var(--gray-100);
   text-align: center;
   transition: all var(--transition-normal);
-  cursor: pointer;
+  cursor: default; /* Changed from pointer since no action */
   position: relative;
   overflow: hidden;
+}
+
+.blood-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--gray-50);
+  color: var(--gray-500);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
 
 .blood-card:hover {
@@ -156,25 +170,26 @@
 }
 
 .blood-type {
-  font-size: 3rem;
+  font-size: 2.25rem; /* Reduced from 3rem */
   font-weight: 800;
   color: var(--red-600);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .blood-info {
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Slightly smaller */
   color: var(--gray-500);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .blood-btn {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.5rem 0.75rem; /* Reduced from 0.75rem */
   background: var(--red-50);
   color: var(--red-700);
   border-radius: var(--radius-md);
   font-weight: 600;
+  font-size: 0.85rem; /* Slightly smaller */
   transition: all 0.3s;
 }
 
@@ -187,7 +202,7 @@
 .main-footer {
   background: var(--gray-900);
   color: white;
-  padding: 5rem 5% 2rem;
+  padding: 4rem 5% 2rem; /* Reduced from 5rem */
 }
 
 .footer-container {
@@ -233,8 +248,8 @@
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 4rem;
-  padding-top: 2rem;
+  margin-top: 2.5rem; /* Reduced from 4rem */
+  padding-top: 1.5rem;
   text-align: center;
   color: var(--gray-500);
   font-size: 0.9rem;
