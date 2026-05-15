@@ -1,12 +1,14 @@
-/* ─── Navbar ─────────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   NAVBAR - Professional spacing and layout
+   ═══════════════════════════════════════════════════════════════ */
+
 .main-navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  height: 80px;
   background: var(--white);
-  /* Changed to white for visibility */
   z-index: 100;
   display: flex;
   align-items: center;
@@ -16,9 +18,9 @@
 
 .navbar-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -271,6 +273,7 @@
   min-height: 100vh;
 }
 
+/* Mobile Responsive - Tablets Portrait and below */
 @media (max-width: 768px) {
   .auth-page {
     grid-template-columns: 1fr;
@@ -287,29 +290,128 @@
 
   .nav-logo-text {
     color: var(--gray-900);
-    /* Keep it dark on mobile too */
   }
 
   .navbar-container {
-    padding: 0 1.5rem;
+    padding: 0 20px;
   }
 
   .hero-panel {
     min-height: auto;
-    padding: 7rem 1.5rem 2.5rem;
-    /* Increased padding to clear navbar */
+    padding: 6rem 20px 2.5rem;
     justify-content: flex-start;
   }
 
   .form-panel {
-    padding: 1rem 1.5rem 2rem;
-
-    /* Tightened top padding significantly */
+    padding: 1.5rem 20px 2rem;
   }
 
   .form-header {
-    margin-bottom: 1.25rem;
-    /* Reduced margin below header */
+    margin-bottom: 1.5rem;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Large (480px - 768px) */
+@media (max-width: 480px) {
+  .main-navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-logo-text {
+    font-size: 1.3rem;
+  }
+
+  .hero-panel {
+    padding: 5rem 16px 2rem;
+  }
+
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-illustration {
+    width: 180px;
+    height: 180px;
+  }
+
+  .form-panel {
+    padding: 1rem 16px 1.5rem;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  .btn-primary {
+    padding: 0.8rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .input-field {
+    padding: 0.8rem 0.9rem 0.8rem 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small (up to 480px) */
+@media (max-width: 375px) {
+  .navbar-container {
+    padding: 0 12px;
+  }
+
+  .nav-logo-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-panel {
+    padding: 4.5rem 12px 1.5rem;
+  }
+
+  .hero-headline {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+  }
+
+  .hero-illustration {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .form-panel {
+    padding: 1rem 12px 1.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.5rem;
   }
 }
 

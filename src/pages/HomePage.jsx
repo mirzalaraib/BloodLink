@@ -8,7 +8,6 @@ import {
   Users, 
   ShieldCheck, 
   ArrowRight, 
-  CheckCircle2, 
   PhoneCall,
   Quote,
   Info
@@ -65,7 +64,8 @@ const HomePage = () => {
               </button>
             </div>
             
-            <div className="hero-home-quote" style={{ marginTop: '2rem', fontStyle: 'italic', color: 'var(--gray-500)', display: 'flex', gap: '0.5rem' }}>
+            {/* <div className="hero-home-quote" style={{ marginTop: '2rem', fontStyle: 'italic', color: 'var(--gray-500)', display: 'flex', gap: '0.5rem' }}> */}
+            <div className="hero-home-quote" style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--gray-500)', display: 'flex', gap: '0.5rem' }}>
               <Quote size={20} className="text-red-500" />
               <p>"The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one—or even you."</p>
             </div>
@@ -179,6 +179,7 @@ const HomePage = () => {
       </section>
 
       {/* ─── Emergency Support CTA ─── */}
+<<<<<<< Updated upstream
       <section className="section-padding" id="contact">
         <motion.div 
           whileHover={{ scale: 1.01 }}
@@ -194,10 +195,21 @@ const HomePage = () => {
           <PhoneCall size={40} style={{ marginBottom: '1.5rem' }} />
           <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>Emergency Blood Support</h2>
           <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2rem', maxWidth: '700px', marginInline: 'auto' }}>
+=======
+      <section className="section-padding">
+        <div className="emergency-cta">
+          <motion.div 
+            whileHover={{ scale: 1.01 }}
+            className="emergency-cta-box"
+          >
+          <PhoneCall size={48} style={{ marginBottom: '2rem' }} />
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Emergency Blood Support</h2>
+          <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '2.5rem', maxWidth: '700px', marginInline: 'auto' }}>
+>>>>>>> Stashed changes
             Are you in an emergency situation? Our rapid response team and active donors are 
             available 24/7. Call us or click below for immediate assistance.
           </p>
-          <div className="hero-home-actions" style={{ justifyContent: 'center' }}>
+          <div className="emergency-cta-actions">
             <button className="nav-btn-outline" style={{ background: 'white', color: 'var(--red-700)', border: 'none', padding: '1rem 2.5rem' }}>
               Call Now: +1 (800) BLOOD-LINK
             </button>
@@ -206,6 +218,7 @@ const HomePage = () => {
             </button>
           </div>
         </motion.div>
+        </div>
       </section>
 
       {/* ─── Footer ─── */}
